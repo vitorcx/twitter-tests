@@ -1,4 +1,4 @@
-describe('Twitter page', function(){
+xdescribe('Twitter page', function(){
     it('access aplication', function(){
         cy.visit('https://twitter.com/') 
     })
@@ -19,8 +19,13 @@ describe('User logged in features', function(){
         cy.get('div.clearfix>button.submit').click()
      })
 
-     it('create new tweet', function(){
+     xit('create new tweet', function(){
          cy.get('div#tweet-box-home-timeline').type('Test')
          cy.get('div.TweetBoxToolbar-tweetButton>button[innerText="Tweet"]').click()
+     })
+
+     it('access moments page', function(){
+         cy.get('.moments>a').click()
+         cy.get('.MomentsGuidePage-content').scrollIntoView()
      })
 })
