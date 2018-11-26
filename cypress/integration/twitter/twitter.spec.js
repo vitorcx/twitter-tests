@@ -1,4 +1,4 @@
-xescribe('Twitter page', function(){
+describe('Twitter page', function(){
     it('should access aplication', function(){
         cy.visit('https://twitter.com/') 
     })
