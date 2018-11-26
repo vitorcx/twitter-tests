@@ -1,4 +1,4 @@
-describe('Twitter page', function(){
+xescribe('Twitter page', function(){
     it('should access aplication', function(){
         cy.visit('https://twitter.com/') 
     })
@@ -27,5 +27,10 @@ describe('User logged in features', function(){
      it('should access moments page', function(){
          cy.get('.moments>a').click()
          cy.get('.MomentsGuidePage-content').scrollIntoView()
+     })
+
+     it('should follow a user', function(){
+         cy.visit('https://twitter.com/cypress_io')
+         cy.get('span.follow-button>button.follow-text').click()
      })
 })
