@@ -21,7 +21,7 @@ describe('User logged in features', function(){
 
      it('should create new tweet', function(){
          cy.get('div#tweet-box-home-timeline').type('Test')
-         cy.get('div.TweetBoxToolbar-tweetButton>button[innerText="Tweet"]').click()
+         cy.get('div#timeline>div.timeline-tweet-box>div>form>div.TweetBoxToolbar>div.TweetBoxToolbar-tweetButton>button').click()
      })
 
      it('should access moments page', function(){
